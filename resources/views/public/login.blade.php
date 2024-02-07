@@ -1,11 +1,14 @@
 @extends('layouts.default')
 @section('content')
+    <script>
+        toastify() - > success('Your action was successful!');
+    </script>
     <section class="grid grid-cols-2 justify-center items-center min-h-screen  ">
 
         <div class="py-8 mx-auto mt-10 px-10  shadow-md rounded-md bg-white">
             <form class="mt-8 space-y-6" action="{{ route('login.client') }}" method="POST">
                 @csrf
-                @method("POST")
+                @method('POST')
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Adresse
                         email</label>
@@ -27,10 +30,12 @@
                             required>
                     </div>
                     <div class="ms-3 text-sm">
-                        <label for="remember" class="font-medium text-gray-500 dark:text-gray-400">Se souvenir de moi</label>
+                        <label for="remember" class="font-medium text-gray-500 dark:text-gray-400">Se souvenir de
+                            moi</label>
                     </div>
                     <a href="#"
-                        class="ms-auto text-sm font-medium text-teal-600 hover:underline dark:text-teal-500">Mot de passe oublié?</a>
+                        class="ms-auto text-sm font-medium text-teal-600 hover:underline dark:text-teal-500">Mot de passe
+                        oublié?</a>
                 </div>
                 <div class="grid grid-cols-2 gap-8">
                     <button type="submit"
@@ -41,7 +46,8 @@
                         tant que teleprospecteur</button>
                 </div>
                 <div class="text-sm font-medium text-gray-900 dark:text-white">
-                    Vous n'êtes pas inscrites ? <a class="text-teal-600 hover:underline dark:text-teal-500" href="/register/">Crée un compte ici</a>
+                    Vous n'êtes pas inscrites ? <a class="text-teal-600 hover:underline dark:text-teal-500"
+                        href="/register/">Crée un compte ici</a>
                 </div>
             </form>
         </div>

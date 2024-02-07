@@ -17,6 +17,7 @@ class ClientAuthController extends Controller
             'password' => ['required'],
         ]);
 
+        notify()->success('Laravel Notify est génial !');
         // Tentative d'authentification
         if (Auth::attempt($credentials)) {
             // Authentification réussie, régénération de la session et redirection
