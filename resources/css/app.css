@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+nav #marker{
+    position: absolute;
+    height: 4px;
+    background-color: rgb(6 148 162);
+    bottom: 20px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
