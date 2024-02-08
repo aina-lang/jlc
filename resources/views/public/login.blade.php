@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <script>
-        toastify() - > success('Your action was successful!');
+        toastify()->success('Your action was successful!');
     </script>
     <section class="grid grid-cols-2 justify-center items-center min-h-screen  ">
 
@@ -52,7 +52,7 @@
             </form>
         </div>
 
-        <div class="bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply  w-full h-screen flex items-center justify-center text-white"
+        <div class="bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply   h-screen flex items-center justify-center text-white"
             style="background-image: url('{{ asset('images/bg1.jpg') }}')">
             <h1 class="text-3xl">JLC</h1>
         </div>

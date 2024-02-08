@@ -17,9 +17,15 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
+
         'telepro' => [
             'driver' => 'session',
             'provider' => 'telepros',
+        ],
+
+        'client' => [
+            'driver' => 'session',
+            'provider' => 'clients',
         ],
     ],
 
@@ -36,9 +42,8 @@ return [
 
         'telepros' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Telepro::class
+            'model' => App\Models\Telepro::class,
         ],
-
     ],
 
     'passwords' => [
@@ -48,12 +53,14 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
         'admins' => [
             'provider' => 'admins',
             'table' => 'password_resets_tokens',
             'expire' => 60,
             'throttle' => 60,
         ],
+
         'telepros' => [
             'provider' => 'telepros',
             'table' => 'password_resets_tokens',
@@ -61,7 +68,6 @@ return [
             'throttle' => 60,
         ],
     ],
-
 
     'password_timeout' => 10800,
 

@@ -12,7 +12,9 @@
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "^5.11",
         "laravel/tinker": "^2.8",
-        "mckenziearts/laravel-notify": "^2.4"
+        "mckenziearts/laravel-notify": "^2.4",
+        "realrashid/sweet-alert": "^7.1",
+        "tjgazel/laravel-toastr": "^1.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

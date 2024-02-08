@@ -163,7 +163,8 @@ return [
         /*
          * Application Service Providers...
          */
-        LaraIzitoast\LaraIzitoastServiceProvider::class,
+        // TJGazel\Toastr\ToastrServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -184,6 +185,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        // 'Toastr' => TJGazel\Toastr\Facades\Toastr::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
     ])->toArray(),
 
 ];
