@@ -44,18 +44,22 @@
             </div>
         </div> --}}
         
-        <div x-data="{ dropdownOpen: false }"  class="relative">
+        <div x-data="{ dropdownOpen: true }"  class="relative">
             <button @click="dropdownOpen = ! dropdownOpen" class="relative block w-12 h-12 overflow-hidden rounded-full shadow focus:outline-none">
                 <img class="object-cover w-full h-full" src="{{ asset('images/bg1.jpg') }}" alt="Your avatar">
             </button>
 
-            {{-- <div x-cloak x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"></div>
+            <div x-cloak x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"></div>
 
             <div x-cloak x-show="dropdownOpen" class="absolute right-0 z-10 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Profile</a>
+               <form action="{{route('logout')}}" method="post" class="block  text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">
+                @csrf
+                <button type="submit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 text-left w-full hover:text-white">Se deconnecter </button>
+              
+               </form>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Products</a>
                 <a href="/login" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Logout</a>
-            </div> --}}
+            </div>
         </div>
     </div>
 </header>

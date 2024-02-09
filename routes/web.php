@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\auth\ClientAuthController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +15,10 @@ Route::get("login/", function () {
     return view('public.login');
 })->name('login');
 
+Route::post("logout/", [AuthController::class, "logout"])->name("logout");
+
 Route::post("login/", [ClientAuthController::class, "login"])->name("login.client");
+
 
 Route::post("register/", [ClientAuthController::class, "register"])->name("register.client");
 
